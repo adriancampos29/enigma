@@ -1,11 +1,12 @@
 class Enigma
 
-  attr_reader :a_key, :b_key, :c_key, :d_key
+  attr_reader :a_key, :b_key, :c_key, :d_key, :a_offset
   def initialize
     @a_key = a_key
     @b_key = b_key
     @c_key = c_key
     @d_key = d_key
+    @a_offset = a_offset
     @character_set = ("a".."z").to_a << " "
   end
 
@@ -16,5 +17,8 @@ class Enigma
     @d_key = key[3..4].to_i
   end
 
+  def offset_number
+    
+  end
 
 end

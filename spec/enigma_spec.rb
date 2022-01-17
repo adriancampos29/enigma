@@ -16,6 +16,16 @@ RSpec.describe Enigma do
     expect(enigma.d_key).to eq(15)
   end
 
+  it 'can offset the date' do
+    enigma = Enigma.new
+    enigma.encrypt("hello world", "02715", "040895")
+    expect(enigma.a_offset).to eq(1)
+    expect(enigma.b_offset).to eq(0)
+    expect(enigma.c_offset).to eq(2)
+    expect(enigma.d_offset).to eq(5)
+  end
+
+
 
   xit 'Encrypt a message with a key and date' do
     enigma = Enigma.new
